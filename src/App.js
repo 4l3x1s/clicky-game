@@ -40,13 +40,14 @@ class App extends Component {
           this.gameOver();
         }
       }
+      return false;
     });
   }
   
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>clicky "Raptors" game</Header>
+        <Header score={this.state.score} highscore={this.state.highscore}>clicky "Rapt{this.state.highscore}rs" game</Header>
         {this.state.cards.map(card => (
           <Card
             clickCount={this.clickCount}
